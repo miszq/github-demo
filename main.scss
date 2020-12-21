@@ -1,0 +1,23 @@
+/* No CSS */ /*# sourceMappingURL=main.css.map */
+$typography: (
+  h1: (
+    color: yellow,
+    font-size: '20px',
+  ),
+  h2: (
+    color: 'black',
+    font-size: '10px',
+  ),
+);
+
+@mixin map-deep-get($map, $keys) {
+  @warn "dupa";
+  @each $item in $map {
+    @if ($item == $keys) {
+    }
+  }
+}
+
+h1 {
+  @include map-deep-get($typography, h1);
+}
